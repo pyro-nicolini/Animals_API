@@ -19,10 +19,16 @@ El proyecto cuenta con una interfaz de registro y login, así como una sección 
 ## Imágenes del Proyecto
 
 Pantalla de Login
+https://github.com/pyro-nicolini/Animals_API/blob/main/img/login.jpg
 
 Pantalla de Registro
+https://github.com/pyro-nicolini/Animals_API/blob/main/img/register.jpg
 
 Pantalla de Gestión de Animales
+https://github.com/pyro-nicolini/Animals_API/blob/main/img/animal.jpg
+
+Evidencia de la respuesta en el servidor
+https://github.com/pyro-nicolini/Animals_API/blob/main/img/mongodb.jpg
 
 
 ## Paso a Paso: Cómo Ejecutar el Proyecto
