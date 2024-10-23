@@ -1,0 +1,206 @@
+html{ box-sizing: border-box;}
+
+*, *::before, *::after{ box-sizing: inherit;}
+
+:root {
+    --igco: linear-gradient(45deg, #f09433, #e6683c, #cc2366, #bc1888);
+    --igco2: linear-gradient(45deg, rgb(255, 180, 180), rgb(255, 252, 174));
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--igco);
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Evita que aparezca scroll si los íconos están fuera de la ventana */
+}
+
+
+h1{
+    font-weight: bold;
+}
+
+.card{
+    text-align: center;
+    background: var(--igco2);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 3px 3px 30px 3px rgba(0, 0, 0, 0.349);
+}
+
+#login-form, #register-form {
+    justify-items: end;
+    z-index: 10;
+}
+
+.name, .type{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.name input, .type input{
+    border-radius: .3rem;
+    border: 1px solid black;
+    padding: 2px 10px;
+    margin-left: 0.4rem;
+}
+
+form .button{    
+    margin-bottom: 1rem;
+}
+
+.button{
+    padding: .5rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    background-color:rgb(0, 161, 67);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.bg-red{
+    margin-left: .4rem;
+    background-color: #ff0095;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+ul{
+    display: block;
+    list-style-type: none;
+    margin-top: 1em 0 1em 0;
+    padding-left: 0px;
+    text-align: center;
+}
+
+ul li{
+    list-style: none;
+    margin: .5rem;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+.error{
+    color: rgba(255, 0, 0, 0.788);
+    font-weight: 400;
+    margin: 1rem;
+}
+
+#register, #login{
+    font-size: .8rem;
+    background-color: #6f00ff;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer a{
+    color: rgb(89, 0, 255);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: var(--Light-gray);
+}
+
+.footer a:visited{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animal-icon {
+    position: absolute;
+    transition: transform 0.3s;
+    color: rgba(255, 228, 196, 0.329);
+    z-index: -1;
+}
+
+i {
+    font-size: 4rem;
+}
+
+
+@media (max-width: 400px) {
+    body {
+        height: 100vh;
+    }
+    .card {
+        max-width: fit-content;
+        text-align: center;
+        width: 90%; /* O ajustar según sea necesario */
+    }
+    
+    #login-form, #register-form {
+        display: flex;
+        flex-direction: column; /* Apilar los elementos uno sobre otro */
+        align-items: center; /* Centrar los elementos horizontalmente */
+        justify-content: center; /* Centrar los elementos verticalmente */
+        width: 100%; /* Asegúrate de que ocupen el ancho completo */
+    }
+
+    .name, .type {
+        display: flex;
+        flex-direction: column; /* Apilar etiquetas y campos de entrada */
+        align-items: flex-start; /* Alinear a la izquierda */
+        margin: 1rem 0; /* Espaciado vertical */
+        width: 100%; /* Asegúrate de que ocupen el ancho completo */
+    }
+
+    .name input, .type input {
+        width: 100%; /* Campo de entrada ocupa todo el ancho */
+        margin-left: 0; /* Quitar margen izquierdo */
+        margin-top: 0.5rem; /* Agregar margen superior */
+    }
+
+    form .button {
+        margin-bottom: 1rem;
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+    
+    .button {
+        margin: 1rem 0; /* Espaciado vertical */
+    }
+    
+    label {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+
+    #register, #login {
+        font-size: .8rem; /* Ajustar tamaño de enlace */
+        margin-top: 1rem; /* Espaciado entre enlaces */
+    }
+}
